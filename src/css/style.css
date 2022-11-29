@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+
+body {
+  background-color: var(--light);
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "home home new"
+    "trending trending new"
+    "popular popular popular"
+    "attribution attribution attribution";
+  grid-template-columns: repeat (2, 1fr);
+  gap: 30px;
+  margin: 80px;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header ul {
+  display: flex;
+  gap: 30px;
+}
+
+.header a {
+  transition: 0.3s;
+}
+
+.header a:hover {
+  color: var(--soft-medium);
+  
+}
+
+.home {
+  grid-area: home;
+}
+
+.new {
+  grid-area: new;
+  background-color: var(--very-dark);
+  color: var(--light);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.new h2 {
+  color: var(--soft);
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.new a {
+  color: var(--light);
+  font-weight: 800;
+  font-size: 22px;
+  transition: 0.3s;
+}
+
+.new a:hover {
+  color: var(--soft);
+  cursor: pointer;
+}
+
+.new p {
+  color: var(--dark);
+  font-size: 15px;
+}
+
+.new hr {
+  color: var(--light-medium);
+}
+
+.trending {
+  grid-area: trending;
+  display: grid;
+  grid-template-areas: "title description";
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+
+.title {
+  grid-area: title;
+  font-weight: 800;
+  font-size: 65px;
+}
+.description {
+  grid-area: description;
+}
+
+.description p {
+  font-size: 18px;
+  line-height: 20px;
+  padding-bottom: 100px;
+}
+.description .btn {
+  background-color: var(--soft-medium);
+  width: 200px;
+  height: 50px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.description .btn a {
+  color: var(--light);
+}
+.description .btn:hover {
+  background-color: var(--very-dark);
+}
+
+.popular {
+  grid-area: popular;
+  display: grid;
+  grid-template-areas: "theme theme-1 theme-2";
+  grid-template-columns: repeat(3, 1fr);
+  gap:80px;
+}
+.popular .theme {
+  grid-area: theme;
+  display: flex;
+  gap: 10px;
+}
+.popular .theme-1 {
+  grid-area: theme-1;
+  display: flex;
+  gap: 10px;
+}
+.popular .theme-2 {
+  grid-area: theme-2;
+  display: flex;
+  gap: 10px;
+}
+.popular img {
+  width: 30%;
+  height: auto;
+}
+.popular .theme .inf {
+  padding-left: 10px;
+}
+.article h4 {
+  color: var(--light-medium);
+  font-weight: 700;
+  font-size: 40px;
+  padding-bottom: 10px;
+}
+.popular a {
+  font-size: 15px;
+  padding-bottom: 30px;
+  transition: 0.3s;
+}
+.popular a:hover {
+  color: var(--soft-medium);
+  cursor: pointer;
+}
+.popular p {
+  color: var(--dark);
+  font-size: 15px;
+}
+
+.attribution {
+  grid-area: attribution;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+}
+.attribution a {
+  color: var(--soft-medium);
+}
+.attribution a:hover {
+  color: blue;
+}
